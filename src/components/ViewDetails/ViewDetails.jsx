@@ -1,18 +1,22 @@
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { addToDb } from '../../utilities/fakeDb';
 
-const ViewDetails = ({ }) => {
+const ViewDetails = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
-
-
+  
     const job = jobs.find(jb => jb.id === id);
     const { jobDescription, jobResponsibility, educationalRequirements, experiences, salary, jobTitle, contactInformation, location } = job;
+    
+    const handleApplyNow = () => {
+        addToDb(id);
+    } 
 
     return (
         <div>
@@ -47,7 +51,7 @@ const ViewDetails = ({ }) => {
                         <p className='text-lg mb-3'><FontAwesomeIcon className='text-[#9873ff]' icon={faEnvelope} /><strong className='text-[#474747] ml-4'>Email:</strong> <span className='text-[#87878b] font-medium'>{contactInformation.email}</span></p>
                         <p className='text-lg mb-3'><FontAwesomeIcon className='text-[#9873ff]' icon={faLocationDot} /><strong className='text-[#474747] ml-4'>Address:</strong> <span className='text-[#87878b] font-medium'>{location}</span></p>
                     </div>
-                    <button className='bg-gradient-to-r from-[#7f8ffe] to-[#9873ff] px-3 py-2 text-base font-semibold text-white rounded w-full hover:bg-none hover:text-[#9873ff] hover:border-[#9873ff] hover:border-2'>Apply Now</button>
+                    <button onClick={() => handleApplyNow(id)} className='bg-gradient-to-r from-[#7f8ffe] to-[#9873ff] px-3 py-2 text-base font-semibold text-white rounded w-full hover:bg-none hover:text-[#9873ff] hover:border-[#9873ff] hover:border-2'>Apply Now</button>
                 </div>
             </div>
         </div>
