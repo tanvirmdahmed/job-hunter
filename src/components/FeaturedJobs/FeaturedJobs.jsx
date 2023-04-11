@@ -1,26 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import FeaturedJob from '../FeaturedJob/FeaturedJob';
 
-const FeaturedJobs = () => {
-    const [featuredJobs, setFeaturedJobs] = useState([]);
+const FeaturedJobs = ({jobData6}) => {
+    const jobData4 = jobData6.slice(0,4);
+    const [jobs, setJobs] = useState(jobData4);
 
-    useEffect(() => {
-        fetch('jobDetails.json')
-        .then(res => res.json())
-        .then(data => setFeaturedJobs(data))
-    },[])
+    const handleShowAllJobs = () => {
+        setJobs(jobData6);
+        document.getElementById('show-all').classList.add('hidden')
+    }
+
 
     return (
-        <div>
+        <div className='w-[80%] md:lg:w-full mb-8 mx-auto'>
             <h1 className='text-4xl font-bold mb-3 text-center'>Featured Jobs</h1>
             <p className='text-[#87878b] text-center'>Sometimes a highly motivated client will pay to have their project listed as a featured job.</p>
-            <div className='grid grid-cols-1 md:lg:grid-cols-2 my-6 items-center justify-around'>
+            <div className='grid grid-cols-1 md:lg:grid-cols-2 my-6 items-center justify-around px-8'>
                 {
-                    featuredJobs.map(featuredJob => <FeaturedJob
-                        key={featuredJob.id}
-                        featuredJob={featuredJob}
+                     jobs.map(job => <FeaturedJob
+                        key={job.id}
+                        job={job}
                     ></FeaturedJob>)
                 }
+            </div>
+            <div className='text-center'>
+                <button onClick={handleShowAllJobs} id='show-all' className='bg-gradient-to-r from-[#7f8ffe] to-[#9873ff] px-3 py-2 text-base font-semibold text-white rounded hover:bg-none hover:text-[#9873ff] hover:border-[#9873ff] hover:border-2z'>Show All Jobs</button>
             </div>
         </div>
     );

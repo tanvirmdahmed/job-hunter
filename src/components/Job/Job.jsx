@@ -3,7 +3,7 @@ import React from 'react';
 const Job = ({ job }) => {
     const { category_logo, category_name, jobs_available } = job;
     return (
-        <div className='w-[315px] h-[245px] hover:border-[1px] hover:border-[#9774ff] rounded-lg p-6'>
+        <div className='flex flex-col items-center md:lg:items-start w-[315px] h-[245px] hover:border-[1px] hover:border-[#9774ff] rounded-lg p-6'>
             <div className='h-20 w-20 bg-[#efecff] p-4 flex justify-center items-center rounded-lg mb-3'>
                 <img className='h-12 w-12' src={category_logo} alt="" />
             </div>
