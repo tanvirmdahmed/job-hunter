@@ -17,6 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement: <Error404></Error404>,
     children: [
       {
         path: '/',
@@ -35,18 +36,18 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog></Blog>
-      } 
+      }, 
+      {
+        path: '/job_details/:id',
+        element: <ViewDetails></ViewDetails>,
+        loader: () => fetch('/jobDetails.json')
+      }
     ]
   },
-  {
-    path: '/job_details/:id',
-    element: <ViewDetails></ViewDetails>,
-    loader: () => fetch('/jobDetails.json')
-  },
-  {
-    path: '/*',
-    element: <Error404></Error404>
-  }
+  // {
+  //   path: '/*',
+  //   element: <Error404></Error404>
+  // }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

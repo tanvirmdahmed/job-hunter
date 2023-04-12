@@ -106,5 +106,41 @@
             "phone": "555-555-5678",
             "email": "marketingjobs@example.com"
         }
+    }, 
+    {
+        "id": "5R9F1Y",
+        "companyLogo": "https://i.ibb.co/CnCVdGD/tesla.png",
+        "jobTitle": "Senior App Developer",
+        "companyName": "Tesla",
+        "remoteOrOnsite": "Remote",
+        "location": "New York, NY",
+        "fulltimeOrPartTime": "Full-time",
+        "salary": "$90,000 - $120,000",
+        "jobDescription": "We are seeking an experienced Marketing Manager to develop and implement marketing strategies for our company.",
+        "jobResponsibility": "- Develop and execute marketing campaigns across various channels\n- Analyze marketing data to measure performance and optimize campaigns\n- Manage a team of marketing specialists\n- Collaborate with other departments to ensure consistency of brand messaging",
+        "educationalRequirements": "Bachelor's degree in Marketing or related field",
+        "experiences": "3+ years of experience in marketing",
+        "contactInformation": {
+            "phone": "208-5678",
+            "email": "appjobs@acme.com"
+        }
+    },
+    {
+        "id": "7G3Z4L",
+        "companyLogo": "https://i.ibb.co/x1j8Cv3/amazon-png-logo-vector-6701-1.png",
+        "jobTitle": "Financial Manager",
+        "companyName": "Amazon",
+        "remoteOrOnsite": "Onsite",
+        "location": "California",
+        "fulltimeOrPartTime": "Full-time",
+        "salary": "$100,000 - $120,000",
+        "jobDescription": "We're looking for a skilled software engineer to join our team and help us build amazing products.",
+        "jobResponsibility": "Responsibilities include designing and implementing software solutions, collaborating with team members, and ensuring that code meets quality standards.",
+        "educationalRequirements": "Bachelor's or higher degree in Computer Science or related field.",
+        "experiences": "3+ years of experience in software development.",
+        "contactInformation": {
+            "phone": "555-555-1234",
+            "email": "jobs@example.com"
+        }
     }
 ]
