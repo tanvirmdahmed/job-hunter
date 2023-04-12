@@ -69,38 +69,43 @@ const Statistics = () => {
     ];
 
     return (
-        <RadarChart
-            className='mx-auto'
-            cx={300}
-            cy={250}
-            outerRadius={150}
-            width={500}
-            height={500}
-            data={data}
-        >
-            <PolarGrid />
-            <PolarAngleAxis dataKey="assignment" />
-            <PolarRadiusAxis />
-            <Tooltip />
-            <Radar
-                name="=>"
-                dataKey="assignmentName"
-            />
-            <Radar
-                name="My Mark"
-                dataKey="mark"
-                stroke="#F7CD2E"
-                fill="#EDBF69"
-                fillOpacity={0.5}
-            />
-            <Radar
-                name="Full Mark"
-                dataKey="fullMark"
-                stroke="#8884d8"
-                fill="#8884d8"
-                fillOpacity={0.3}
-            />
-        </RadarChart>
+        <div>
+            <div className='bg-[#f9f9ff] bgImage flex items-center justify-center mb-8'>
+                <h1 className='text-4xl font-bold my-12 md:lg:my-28'>Assignment Statistics</h1>
+            </div>
+            <RadarChart
+                className='mx-auto'
+                cx={300}
+                cy={250}
+                outerRadius={150}
+                width={500}
+                height={500}
+                data={data}
+            >
+                <PolarGrid />
+                <PolarAngleAxis dataKey="assignment" />
+                <PolarRadiusAxis />
+                <Tooltip />
+                <Radar
+                    name="=>"
+                    dataKey="assignmentName"
+                />
+                <Radar
+                    name="My Mark"
+                    dataKey="mark"
+                    stroke="#F7CD2E"
+                    fill="#EDBF69"
+                    fillOpacity={0.5}
+                />
+                <Radar
+                    name="Full Mark"
+                    dataKey="fullMark"
+                    stroke="#8884d8"
+                    fill="#8884d8"
+                    fillOpacity={0.3}
+                />
+            </RadarChart>
+        </div>
     );
 };
 

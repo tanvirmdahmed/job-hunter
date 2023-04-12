@@ -3,8 +3,8 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='w-full mb-8'>
-            <div className='bgImage flex items-center justify-center mb-8'>
-                <h1 className='text-4xl font-bold my-12 mb:lg:my-36'>Blogs</h1>
+            <div className='bg-[#f9f9ff] bgImage flex items-center justify-center mb-8'>
+                <h1 className='text-4xl font-bold my-12 md:lg:my-28'>Blog</h1>
             </div>
             <div className='md:lg:px-[15%]'>
                 <div className='bg-cyan-100 rounded-lg p-8 my-4'>

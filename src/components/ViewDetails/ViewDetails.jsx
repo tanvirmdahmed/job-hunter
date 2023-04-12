@@ -54,8 +54,8 @@ const ViewDetails = () => {
 
             {/* Job Details */}
             <div className=''>
-            <div className='bgImage flex items-center justify-center mb-8'>
-                <h1 className='text-4xl font-bold my-12 md:lg:my-36'>Job Details</h1>
+            <div className='bg-[#f9f9ff] bgImage flex items-center justify-center mb-8'>
+                <h1 className='text-4xl font-bold my-12 md:lg:my-28'>Job Details</h1>
             </div>
                 <div className='my-10 w-full flex flex-col items-center md:lg:items-start md:lg:flex-row gap-8 md:lg:gap-2 mx-auto md:lg:px-[15%]'>
                     <div className='w-[80%] md:lg:w-[70%]'>

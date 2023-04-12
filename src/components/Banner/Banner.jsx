@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='flex flex-col-reverse md:lg:flex-row items-center py-10 bg-[#f9f9ff] md:lg:px-[15%]'>
+        <div className='flex flex-col-reverse md:lg:flex-row items-center py-10 bg-[#f9f9ff] bgImage md:lg:px-[15%]'>
             <div className='w-[80%] md:lg:w-[50%]'>
                 <h1 className='text-4xl md:lg:text-7xl text-center md:lg:text-left font-bold leading-relaxed  mb-5'><span>One Step</span> <br /> <span>Closer To Your</span> <br /> <span className='text-[#7f90fe]'>Dream Job</span></h1>
                 <p className='text-[#87878b] text-lg text-center md:lg:text-left mb-5'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
