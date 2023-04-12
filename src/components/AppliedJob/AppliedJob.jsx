@@ -7,7 +7,6 @@ import JobCart from '../JobCart/JobCart';
 const AppliedJob = () => {
     const appliedJobsWithFilter = [];
     const [appliedJobs, setAppliedJobs] = useState(appliedJobsWithFilter);
-    console.log(appliedJobs);
 
     const allJobs = useLoaderData();
 
@@ -18,9 +17,14 @@ const AppliedJob = () => {
         appliedJobsWithFilter.push(applied);
     };
 
-    const handleFilerRemoteJobs = () => {
+    
+    const handleRemoteJobs = () => {
         const remoteJobs = appliedJobsWithFilter.filter(appliedJobWithFilter => appliedJobWithFilter.remoteOrOnsite === 'Remote');
         setAppliedJobs(remoteJobs);
+    };
+    
+    const handleAllJobs = () => {
+        setAppliedJobs(appliedJobsWithFilter);
     };
 
 
@@ -30,8 +34,9 @@ const AppliedJob = () => {
                 <h1 className='text-4xl font-bold my-12 md:lg:my-28'>Applied Job</h1>
             </div>
             <div className='flex gap-8 items-end justify-end md:lg:px-[15%] mb-10'>
-                <button className='bg-gradient-to-r from-[#ff9347] to-[#c39f2b] px-3 py-2 text-base font-semibold text-white rounded hover:bg-none hover:text-[#ff9347] hover:border-[#ff9347] hover:border-2'>Filter by Onsite</button>
-                <button onClick={handleFilerRemoteJobs} className='bg-gradient-to-r from-[#7f8ffe] to-[#9873ff] px-3 py-2 text-base font-semibold text-white rounded hover:bg-none hover:text-[#9873ff] hover:border-[#9873ff] hover:border-2'>Filter by Remote</button>
+                <button onClick={handleOnSiteJobs} className='bg-gradient-to-r from-[#ff9347] to-[#c39f2b] px-3 py-2 text-base font-semibold text-white rounded hover:bg-none hover:text-[#ff9347] hover:border-[#ff9347] hover:border-2'>Onsite Jobs</button>
+                <button onClick={handleRemoteJobs} className='bg-gradient-to-r from-[#7f8ffe] to-[#9873ff] px-3 py-2 text-base font-semibold text-white rounded hover:bg-none hover:text-[#9873ff] hover:border-[#9873ff] hover:border-2'>Remote Jobs</button>
+                <button onClick={handleAllJobs} className='bg-gradient-to-r from-[#ff9347] to-[#c39f2b] px-3 py-2 text-base font-semibold text-white rounded hover:bg-none hover:text-[#ff9347] hover:border-[#ff9347] hover:border-2'>Reset</button>
             </div>
             <div className='md:lg:px-[15%]'>
                 {
