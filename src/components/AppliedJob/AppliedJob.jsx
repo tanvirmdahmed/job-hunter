@@ -17,7 +17,11 @@ const AppliedJob = () => {
         appliedJobsWithFilter.push(applied);
     };
 
-    
+    const handleOnSiteJobs = () => {
+        const onSiteJobs = appliedJobsWithFilter.filter(appliedJobWithFilter => appliedJobWithFilter.remoteOrOnsite === 'Onsite');
+        setAppliedJobs(onSiteJobs);
+    };
+
     const handleRemoteJobs = () => {
         const remoteJobs = appliedJobsWithFilter.filter(appliedJobWithFilter => appliedJobWithFilter.remoteOrOnsite === 'Remote');
         setAppliedJobs(remoteJobs);
