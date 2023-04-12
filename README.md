@@ -1,4 +1,4 @@
-### Live Link: [https://unrivaled-sunshine-668e5d.netlify.app/]()
+### Live Link: https://unrivaled-sunshine-668e5d.netlify.app
 
 
 ### 1. The front page first included a banner, then it loaded the job category through a json file, then it loaded the highlighted jobs. When you click the display all jobs button, it loads all of the data. When you click the highlighted job see details button, you will be sent to the view details page, which will provide all of the details for that individual work.
