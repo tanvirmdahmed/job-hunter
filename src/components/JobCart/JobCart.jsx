@@ -8,9 +8,9 @@ const JobCart = ({ appliedJob }) => {
     const { id, companyLogo, jobTitle, companyName, remoteOrOnsite, fulltimeOrPartTime, location, salary } = appliedJob;
     return (
         <div>
-            <div className='flex justify-between items-center my-3 p-10 border-[1px] shadow mb-12'>
-                <div className='flex gap-12 items-center'>
-                    <div className='bg-[#f4f4f4] h-[200px] w-[200px] p-auto rounded-lg flex justify-center items-center'>
+            <div className='flex flex-col md:lg:flex-row justify-between items-center my-3 p-10 border-[1px] shadow mb-12'>
+                <div className='flex flex-col md:lg:flex-row gap-12 items-center'>
+                    <div className='bg-[#f4f4f4] md:lg:h-[200px] md:lg:w-[200px] p-auto rounded-lg flex justify-center items-center'>
                         <img className='mb-3 mx-auto md:lg:mx-0 h-10' src={companyLogo} alt="" />
                     </div>
                     <div>
