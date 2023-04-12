@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const FeaturedJob = ({ job }) => {
     const { id, companyLogo, jobTitle, companyName, remoteOrOnsite, fulltimeOrPartTime, location, salary } = job;
     return (
-        <div className='my-10'>
+        <div className='my-3 p-10 border-[1px] shadow'>
             <img className='mb-3 mx-auto md:lg:mx-0' src={companyLogo} alt="" />
             <h3 className='text-2xl font-bold mb-2 text-center md:lg:text-left'>{jobTitle}</h3>
             <p className='text-lg font-semibold text-[#87878b] mb-2 text-center md:lg:text-left'>{companyName}</p>
